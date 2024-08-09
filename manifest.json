@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT TextGuard",
+  "version": "1.0",
+  "description": "Descaracteriza informações que possivelmente são sensíveis.",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "scripting",
+    "storage"
+  ],
+  "icons": {
+    "128": "./Favicon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
